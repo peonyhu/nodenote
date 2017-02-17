@@ -84,3 +84,7 @@ git的使用
     “如果美誉看到git目录，那是因为这个目录默认是隐藏的，用ls -al命令就可以看见”
 git工作流
     工作区(硬盘上实际的物理目录) -》git add 文件名(到达暂存区)      暂存区 -》git commit -m '这里是注释'  (到达历史区) 历史区
+
+从本地推送到远程github上面(第一次的时候用这两句代码，要是下一次的时候直接添加提交后就可以用最后一句的代码了,nodenote这个是文件名)
+$ git remote add origin https://github.com/peonyhu/nodenote.git
+$ git push -u origin master
