@@ -78,7 +78,7 @@ http及深入应用
 git的应用
 git的使用
 创建版本库
-    1.先创建一个空目录，然后进入此目录
+    1.先创建一个空目录，然后进入此目录(mkdir 文件名)
     2.点击右键选择git-bash打开命令行
     3.git init命令把这个目录变成git可以管理的仓库
     “如果美誉看到git目录，那是因为这个目录默认是隐藏的，用ls -al命令就可以看见”
@@ -97,8 +97,13 @@ $ git push -u origin master
 5.git push origin master    推送到本人的github上
 6.发一个pull request
 7.由讲师合并代码
-7.由讲师合并代码
 
+学习github的练习
+http://learngitbranching.js.org/
 
-
+echo xxx > yyy.txt表示把xxx内容保存到yyy.txt中，你也可以打开记事本进行编辑，手工把xxx写入yyy.txt中并保存
+例如：
+$ echo 1 > index.html // 把1输出到新创建的index.html文件中 > 表示清空并写入
+$ echo 2 >> index.html //把2加到index.html中  >> 表示在原来文件的末尾追加
+$ cat index.html //查看文件内容
 
