@@ -85,6 +85,20 @@ git的使用
 git工作流
     工作区(硬盘上实际的物理目录) -》git add 文件名(到达暂存区)      暂存区 -》git commit -m '这里是注释'  (到达历史区) 历史区
 
-从本地推送到远程github上面(第一次的时候用这两句代码，要是下一次的时候直接添加提交后就可以用最后一句的代码了,nodenote这个是文件名)
+从本地推送到远程github上面(第一次的时候用这两句代克隆码，要是下一次的时候直接添加提交后就可以用最后一句的代码了,nodenote这个是文件名)
 $ git remote add origin https://github.com/peonyhu/nodenote.git
 $ git push -u origin master
+
+要是你用其他人的地址，并没有权限的话，先在github上面fork后弄到自己的仓库地址在进行下面的操作
+1.克隆你fork后的项目,git clone 仓库地址
+2.修改工作区文件，添加你的练习
+3.git add -A    提交到暂存区
+4.git commit -m '提交作业'  提交到历史区
+5.git push origin master    推送到本人的github上
+6.发一个pull request
+7.由讲师合并代码
+7.由讲师合并代码
+
+
+
+
