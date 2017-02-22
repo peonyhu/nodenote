@@ -122,6 +122,7 @@ rm -rf 文件名
 查看提交的历史
 git log --oneline --graph
 
+git commit -a -m "" 添加并提交
 .git目录存放的是暂存区和历史区，不属于工作区，除此之外都属于工作区
 
 创建dev分支，并切换到dev分支
