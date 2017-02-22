@@ -110,5 +110,10 @@ $ cat index.html //查看文件内容
 创建新文件
 touch index.js
 
+查看几个区的变化
+git status 
+
+删除一个内容
+rm -rf 文件名
 
 .git目录存放的是暂存区和历史区，不属于工作区，除此之外都属于工作区
