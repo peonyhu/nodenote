@@ -110,10 +110,23 @@ $ cat index.html //查看文件内容
 创建新文件
 touch index.js
 
-查看几个区的变化
+告诉有文件被修改过
 git status 
+git diff 查看工作区和暂存区的差别
+git diff HEAD 查看工作区和HEAD(当前工作分支)相比的差异
+git diff --cached 查看暂存区和历史区的差异
 
 删除一个内容
 rm -rf 文件名
 
+查看提交的历史
+git log --oneline --graph
+
 .git目录存放的是暂存区和历史区，不属于工作区，除此之外都属于工作区
+
+创建dev分支，并切换到dev分支
+git checkout -b dev
+==>git branch dev   创建分支
+   git checkout dev 切换到dev分支
+查看当前分支
+git branch
