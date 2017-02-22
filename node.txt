@@ -107,3 +107,8 @@ $ echo 1 > index.html // 把1输出到新创建的index.html文件中 > 表示�
 $ echo 2 >> index.html //把2加到index.html中  >> 表示在原来文件的末尾追加
 $ cat index.html //查看文件内容
 
+创建新文件
+touch index.js
+
+
+.git目录存放的是暂存区和历史区，不属于工作区，除此之外都属于工作区
