@@ -137,3 +137,13 @@ git merge 分支名
 
 合并完成后删除dev分支
 git branch -d dev
+
+
+当我们修改很多但是只想提交一个的时候我们可以用
+git log --oneline   查看提交的日志
+git cherry-pick 提交的那个日志号
+
+标签
+git tag v1.0    新标签
+git tag         查看标签
+git tag -a(标签名) v0.8 -m "merge with no-ff" beebf73   创建带有说明的标签
