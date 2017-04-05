@@ -98,6 +98,7 @@ $ git push -u origin master
 6.发一个pull request
 7.由讲师合并代码
 
+
 学习github的练习
 http://learngitbranching.js.org/
 
@@ -147,3 +148,10 @@ git cherry-pick 提交的那个日志号
 git tag v1.0    新标签
 git tag         查看标签
 git tag -a(标签名) v0.8 -m "merge with no-ff" beebf73   创建带有说明的标签
+
+git remote      查看远程库信息
+git remote -v   显示更详细的信息
+
+npm config ls   查看配置文件的路径   设置全局安装的目录   设置代理
+npm install -g '文件名'   全局安装第三方文件
+npm install '文件名'   本地安装讲一个模块下载到当前目录的node_modules子目录，然后只有在当前目录和他的子目录之中，才能调用这个模块
