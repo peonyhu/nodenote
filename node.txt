@@ -155,3 +155,80 @@ git remote -v   显示更详细的信息
 npm config ls   查看配置文件的路径   设置全局安装的目录   设置代理
 npm install -g '文件名'   全局安装第三方文件
 npm install '文件名'   本地安装讲一个模块下载到当前目录的node_modules子目录，然后只有在当前目录和他的子目录之中，才能调用这个模块
+
+项目管理
+1初始化项目
+2安装第三方模块
+3注册用户    npm adduser
+4发布项目
+
+
+ Buffer 类似于数组
+ Buffer里面只能放字节 0-255
+ 指定大小
+
+ 定义buffer
+    new Buffer(size)
+    数组创建 new Buffer(array);
+    字符串创建 new Buffer(str,[encoding]);
+
+字符串和buffer转换
+字符串转buffer
+    var buffer = new Buffer('珠峰','utf-8');
+buffer转字符串
+    buffer.toString('utf-8',3,6)
+buffer的常用方法
+    合并Buffer Buffer.concat([buf1,buf2],length)
+    复制Buffer
+    Buffer.copy(targetBuffer,targetstart,sourcestart,sourceend)
+        var buffers = new Buffer(12);
+        buf1.copy(buffers,0,0,3);
+        console.log(buffers.toString('utf8'));
+    判断是否是 Buffer.isBuffer
+    获取字节长度 Buffer.byteLength
+
+读文件
+    一步方法
+    1.异步方法需要把回调函数传入
+    2.回调函数会在同步方法执行完毕之后才会执行异步回调
+    3.异步方法不能阻塞主线程，不会影响后续代码的执行
+    fs.readFile('./index.txt','utf8',afterRead);
+
+
+    同步方法
+    1.每一个同步方法和异步方法都是成对出现的
+    2.同步方法会阻塞主线程的执行，在数据没有返回之前不能执行后续代码
+    3.他不需要传递回调函数，通过函数返回值接受结果
+    4.要是想捕获异常，用try{}catch(error){}
+    var data = fs.readFileSync('./index.txt','utf8');
+    console.log(data);
+
+    要是有多个方法需要执行的时候
+    1.回调函数嵌套实现多个异步操作完成之后执行的回调
+        缺点：
+        1.需要的时间长 m+n
+        2.代码的可读性非常差
+    2.计数器
+        判断参数的个数进行后续的操作
+
+
+
+写文件
+    同步
+        fs.writeFileSync('./write1.txt','珠峰培训');
+    异步
+        fs.writeFile('./write2.txt','aaaaa',function (err) {
+            console.log(arguments);
+        });
+        flag表示要对此文件做何种类型的操作
+        w 清空并写入
+        a 在原有基础上追加
+        追加方法
+        fs.appendFile('./write.txt','node')
+
+拷贝文件
+    1.把src里的文件内容，写入到target文件里
+    2.写入时要先清空在写入
+
+操作目录
+    
